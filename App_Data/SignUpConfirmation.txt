@@ -1,0 +1,13 @@
+﻿Hi <% UserName %>,
+
+Thank you for signing up for a new account at www.FamilyHikes.com.
+
+To log in to the site, use the following details:
+
+User name:		<% UserName %>
+Your password:	<% Password %>
+
+We look forward to your contributions.
+Happy hiking!
+
+The FamilyHikes team

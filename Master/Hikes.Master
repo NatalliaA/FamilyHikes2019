@@ -1,0 +1,136 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Hikes.master.cs" Inherits="FamilyHikes2019.Master.Hikes" %>
+
+<%@ Register Src="~/Controls/Banner.ascx" TagPrefix="uc1" TagName="Banner" %>
+
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <link href="../Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="../Style/styleHikes.css" rel="stylesheet" />
+    <link href="../Content/themes/base/jquery-ui.css" rel="stylesheet" />
+    <link href="../Content/themes/base/datepicker.css" rel="stylesheet" />
+    <link href="../lib/font-awesome/css/fontawesome.css" rel="stylesheet" />
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style>      
+        .navbar-nav {
+            font: bold;
+            font-size: 20px;
+        }
+
+        .navbar-brand {
+            font-size: 40px;
+            color: #43AC38 !important;
+            font-family: Calibri;
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+<body style="background-color: whitesmoke;">
+    <form id="form1" runat="server">
+        <div class="container-fluid">
+
+            <%--<div class="jumbotron" style="padding-bottom:1em; padding-top:1em;">--%>
+            <nav class="navbar navbar-expand-md navbar-dark bg-dark rounded-top">
+                <!-- Brand -->
+                <a class="navbar-brand" href="../Default.aspx">FAMILY HIKES</a>
+                <!-- Toggler/collapsibe Button -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Navbar links -->
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../Default.aspx">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../AllTrails.aspx">All Trails</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../AddHike.aspx">Add Your Hike</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../Videos.aspx">Videos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../Contact.aspx">Contact</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ml-auto">
+
+                       <%-- <li class="nav-item">--%>
+                       <asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">
+                    <AnonymousTemplate>
+                        <li class="nav-item">
+                         <a class="nav-link" href="../Register.aspx">Sign up</a>
+                            </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="~/Login.aspx" ID="HeadLoginStatus" runat="server">Log In</a>
+                    </li>
+                            </AnonymousTemplate>
+                    <LoggedInTemplate>
+                        <li class="nav-item nav-link">
+                        Welcome<a class="nav-link d-inline" style="color:#43AC38; padding:1px" href="../EditProfile.aspx">
+                            <asp:LoginName ID="HeadLoginName" runat="server"/></a>!</li>
+                          
+                        <li class="nav-item nav-link">
+                        <asp:LoginStatus class="nav-link d-inline" ID="HeadLoginStatus" runat="server" 
+                            LogoutAction="Redirect" LogoutText="Log Out" LogoutPageUrl="~/Login.aspx"/>
+                            </li>
+                    </LoggedInTemplate>
+                </asp:LoginView>
+                      
+                    </ul>
+                </div>
+            </nav>
+
+            <%--<asp:Image class="img-fluid rounded-bottom" ID="JumbotronImage" runat="server" ImageUrl="~/Pictures/Hiking.jpg" />--%>
+            <div class="img-responsive jumbotron" style="height: 260px; background-image: url(pictures/Hiking.jpg);
+                background-repeat: no-repeat; background-size: cover">
+
+                <%--search trail textbox and button--%>
+                <div class="container-fluid">
+                    <div class="d-flex justify-content-center">
+                        <div class="form group">
+                            <asp:TextBox CssClass="form-control-sm" ID="tbx_search" runat="server"
+                                AutoCompleteType="DisplayName" placeholder="Trail, state, camping, etc"></asp:TextBox>
+                            <asp:Button CssClass="btn btn-success ml-1" ID="btn_search" runat="server"
+                                Text="Search Trails" OnClick="btn_search_Click" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <%-- Search Results PlaceHolder --%>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolderSearch" runat="server">
+        </asp:ContentPlaceHolder>
+        <%-- Main PlaceHolder --%>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+
+        <%-- Banner --%>
+        <div class="container-fluid">
+            <div class="mt-5">
+            <uc1:Banner runat="server" ID="Banner" />
+                </div>
+        </div>
+    <br />
+   <%-- <footer>
+        <asp:LoginName ID="LoginName1" FormatString="Logged in as {0}" runat="server" />
+        <asp:LoginView ID="LoginView1" runat="server">
+            <LoggedInTemplate>
+                (<asp:LoginStatus ID="LoginStatus1" runat="server" />)
+            </LoggedInTemplate>
+        </asp:LoginView>
+    </footer>--%>
+    </form>
+    <script src="../Scripts/jquery-3.4.1.min.js"></script>
+    <script src="../Scripts/bootstrap.min.js"></script>
+</body>
+</html>

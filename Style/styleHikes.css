@@ -1,0 +1,25 @@
+﻿
+.blink_img1 {
+    animation: blinker 2s linear infinite;
+}
+.blink_img2 {
+    animation: blinker 3s linear infinite;
+}
+.blink_img3 {
+    animation: blinker 2s linear infinite;
+}
+.blink_img4 {
+    animation: blinker 3s linear infinite;
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0.2;
+    }
+}
+
+@keyframes blin {
+    50% {
+        opacity: 0;
+    }
+}

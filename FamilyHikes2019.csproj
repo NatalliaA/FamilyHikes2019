@@ -1,0 +1,672 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <Import Project="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{63F14409-B686-45C2-84DC-5A22DB8BB049}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FamilyHikes2019</RootNamespace>
+    <AssemblyName>FamilyHikes2019</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44301</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TypeScriptToolsVersion>3.6</TypeScriptToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=19.1.0.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <HintPath>packages\AjaxControlToolkit.19.1.0\lib\net40\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Providers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.Providers.Core.2.0.0\lib\net40\System.Web.Providers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AddHike.aspx" />
+    <Content Include="AddHikeConfirmation.aspx" />
+    <Content Include="AllTrails.aspx" />
+    <Content Include="App_Data\ContactForm.txt" />
+    <Content Include="App_Data\hikes2019.accdb" />
+    <Content Include="App_Data\SignUpConfirmation.txt" />
+    <Content Include="bin\FamilyHikes2019.pdb" />
+    <Content Include="bin\SampleAccessProviders.dll" />
+    <Content Include="Contact.aspx" />
+    <Content Include="Content\bootstrap-grid.css" />
+    <Content Include="Content\bootstrap-grid.min.css" />
+    <Content Include="Content\bootstrap-reboot.css" />
+    <Content Include="Content\bootstrap-reboot.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\themes\base\accordion.css" />
+    <Content Include="Content\themes\base\all.css" />
+    <Content Include="Content\themes\base\autocomplete.css" />
+    <Content Include="Content\themes\base\base.css" />
+    <Content Include="Content\themes\base\button.css" />
+    <Content Include="Content\themes\base\core.css" />
+    <Content Include="Content\themes\base\datepicker.css" />
+    <Content Include="Content\themes\base\dialog.css" />
+    <Content Include="Content\themes\base\draggable.css" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_444444_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_555555_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_777620_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_777777_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cc0000_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Content\themes\base\jquery-ui.css" />
+    <Content Include="Content\themes\base\jquery-ui.min.css" />
+    <Content Include="Content\themes\base\menu.css" />
+    <Content Include="Content\themes\base\progressbar.css" />
+    <Content Include="Content\themes\base\resizable.css" />
+    <Content Include="Content\themes\base\selectable.css" />
+    <Content Include="Content\themes\base\selectmenu.css" />
+    <Content Include="Content\themes\base\slider.css" />
+    <Content Include="Content\themes\base\sortable.css" />
+    <Content Include="Content\themes\base\spinner.css" />
+    <Content Include="Content\themes\base\tabs.css" />
+    <Content Include="Content\themes\base\theme.css" />
+    <Content Include="Content\themes\base\tooltip.css" />
+    <Content Include="Controls\AddhikeBanner.ascx" />
+    <Content Include="Controls\Banner.ascx" />
+    <Content Include="Default.aspx" />
+    <Content Include="EditProfile.aspx" />
+    <Content Include="lib\font-awesome\css\all.css" />
+    <Content Include="lib\font-awesome\css\all.min.css" />
+    <Content Include="lib\font-awesome\css\brands.css" />
+    <Content Include="lib\font-awesome\css\brands.min.css" />
+    <Content Include="lib\font-awesome\css\fontawesome.css" />
+    <Content Include="lib\font-awesome\css\fontawesome.min.css" />
+    <Content Include="lib\font-awesome\css\regular.css" />
+    <Content Include="lib\font-awesome\css\regular.min.css" />
+    <Content Include="lib\font-awesome\css\solid.css" />
+    <Content Include="lib\font-awesome\css\solid.min.css" />
+    <Content Include="lib\font-awesome\css\svg-with-js.css" />
+    <Content Include="lib\font-awesome\css\svg-with-js.min.css" />
+    <Content Include="lib\font-awesome\css\v4-shims.css" />
+    <Content Include="lib\font-awesome\css\v4-shims.min.css" />
+    <Content Include="lib\font-awesome\js\all.js" />
+    <Content Include="lib\font-awesome\js\all.min.js" />
+    <Content Include="lib\font-awesome\js\brands.js" />
+    <Content Include="lib\font-awesome\js\brands.min.js" />
+    <Content Include="lib\font-awesome\js\conflict-detection.js" />
+    <Content Include="lib\font-awesome\js\conflict-detection.min.js" />
+    <Content Include="lib\font-awesome\js\fontawesome.js" />
+    <Content Include="lib\font-awesome\js\fontawesome.min.js" />
+    <Content Include="lib\font-awesome\js\regular.js" />
+    <Content Include="lib\font-awesome\js\regular.min.js" />
+    <Content Include="lib\font-awesome\js\solid.js" />
+    <Content Include="lib\font-awesome\js\solid.min.js" />
+    <Content Include="lib\font-awesome\js\v4-shims.js" />
+    <Content Include="lib\font-awesome\js\v4-shims.min.js" />
+    <Content Include="lib\font-awesome\sprites\brands.svg" />
+    <Content Include="lib\font-awesome\sprites\regular.svg" />
+    <Content Include="lib\font-awesome\sprites\solid.svg" />
+    <Content Include="lib\font-awesome\webfonts\fa-brands-400.svg" />
+    <Content Include="lib\font-awesome\webfonts\fa-regular-400.svg" />
+    <Content Include="lib\font-awesome\webfonts\fa-solid-900.svg" />
+    <Content Include="Login.aspx" />
+    <Content Include="packages\bootstrap.4.3.1\contentFiles\Content\bootstrap-grid.css" />
+    <Content Include="packages\bootstrap.4.3.1\contentFiles\Content\bootstrap-grid.min.css" />
+    <Content Include="packages\bootstrap.4.3.1\contentFiles\Content\bootstrap-reboot.css" />
+    <Content Include="packages\bootstrap.4.3.1\contentFiles\Content\bootstrap-reboot.min.css" />
+    <Content Include="packages\bootstrap.4.3.1\contentFiles\Content\bootstrap.css" />
+    <Content Include="packages\bootstrap.4.3.1\contentFiles\Content\bootstrap.min.css" />
+    <Content Include="packages\bootstrap.4.3.1\contentFiles\Scripts\bootstrap.bundle.js" />
+    <Content Include="packages\bootstrap.4.3.1\contentFiles\Scripts\bootstrap.bundle.min.js" />
+    <Content Include="packages\bootstrap.4.3.1\contentFiles\Scripts\bootstrap.js" />
+    <Content Include="packages\bootstrap.4.3.1\contentFiles\Scripts\bootstrap.min.js" />
+    <Content Include="packages\bootstrap.4.3.1\content\Content\bootstrap-grid.css" />
+    <Content Include="packages\bootstrap.4.3.1\content\Content\bootstrap-grid.min.css" />
+    <Content Include="packages\bootstrap.4.3.1\content\Content\bootstrap-reboot.css" />
+    <Content Include="packages\bootstrap.4.3.1\content\Content\bootstrap-reboot.min.css" />
+    <Content Include="packages\bootstrap.4.3.1\content\Content\bootstrap.css" />
+    <Content Include="packages\bootstrap.4.3.1\content\Content\bootstrap.min.css" />
+    <Content Include="packages\bootstrap.4.3.1\content\Scripts\bootstrap.bundle.js" />
+    <Content Include="packages\bootstrap.4.3.1\content\Scripts\bootstrap.bundle.min.js" />
+    <Content Include="packages\bootstrap.4.3.1\content\Scripts\bootstrap.js" />
+    <Content Include="packages\bootstrap.4.3.1\content\Scripts\bootstrap.min.js" />
+    <Content Include="packages\bootstrap.4.3.1\LICENSE.txt" />
+    <Content Include="packages\EntityFramework.6.0.0\.signature.p7s" />
+    <Content Include="packages\EntityFramework.6.0.0\Content\App.config.transform" />
+    <Content Include="packages\EntityFramework.6.0.0\Content\Web.config.transform" />
+    <Content Include="packages\EntityFramework.6.0.0\EntityFramework.6.0.0.nupkg" />
+    <Content Include="packages\EntityFramework.6.0.0\tools\EntityFramework.psd1" />
+    <Content Include="packages\EntityFramework.6.0.0\tools\EntityFramework.psm1" />
+    <Content Include="packages\EntityFramework.6.0.0\tools\init.ps1" />
+    <Content Include="packages\EntityFramework.6.0.0\tools\install.ps1" />
+    <Content Include="libman.json" />
+    <Content Include="lib\font-awesome\webfonts\fa-brands-400.eot" />
+    <Content Include="lib\font-awesome\webfonts\fa-brands-400.ttf" />
+    <Content Include="lib\font-awesome\webfonts\fa-brands-400.woff" />
+    <Content Include="lib\font-awesome\webfonts\fa-brands-400.woff2" />
+    <Content Include="lib\font-awesome\webfonts\fa-regular-400.eot" />
+    <Content Include="lib\font-awesome\webfonts\fa-regular-400.ttf" />
+    <Content Include="lib\font-awesome\webfonts\fa-regular-400.woff" />
+    <Content Include="lib\font-awesome\webfonts\fa-regular-400.woff2" />
+    <Content Include="lib\font-awesome\webfonts\fa-solid-900.eot" />
+    <Content Include="lib\font-awesome\webfonts\fa-solid-900.ttf" />
+    <Content Include="lib\font-awesome\webfonts\fa-solid-900.woff" />
+    <Content Include="lib\font-awesome\webfonts\fa-solid-900.woff2" />
+    <None Include="packages\jQuery.3.4.1\Content\Scripts\jquery-3.4.1-vsdoc.js" />
+    <Content Include="packages\EntityFramework.6.0.0\lib\net40\EntityFramework.dll" />
+    <Content Include="packages\EntityFramework.6.0.0\lib\net40\EntityFramework.SqlServer.dll" />
+    <Content Include="packages\EntityFramework.6.0.0\lib\net40\EntityFramework.SqlServer.xml" />
+    <Content Include="packages\EntityFramework.6.0.0\lib\net40\EntityFramework.xml" />
+    <Content Include="packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll" />
+    <Content Include="packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll" />
+    <Content Include="packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.xml" />
+    <Content Include="packages\EntityFramework.6.0.0\lib\net45\EntityFramework.xml" />
+    <Content Include="packages\EntityFramework.6.0.0\tools\about_EntityFramework.help.txt" />
+    <Content Include="packages\EntityFramework.6.0.0\tools\EntityFramework.PowerShell.dll" />
+    <Content Include="packages\EntityFramework.6.0.0\tools\EntityFramework.PowerShell.Utility.dll" />
+    <Content Include="packages\EntityFramework.6.0.0\tools\migrate.exe" />
+    <Content Include="packages\jQuery.3.4.1\Content\Scripts\jquery-3.4.1.js" />
+    <Content Include="packages\jQuery.3.4.1\Content\Scripts\jquery-3.4.1.min.js" />
+    <Content Include="packages\jQuery.3.4.1\Content\Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="packages\jQuery.3.4.1\Content\Scripts\jquery-3.4.1.slim.min.js" />
+    <None Include="packages\jQuery.3.4.1\Tools\jquery-3.4.1.intellisense.js" />
+    <Content Include="packages\jQuery.UI.Combined.1.12.1\Content\Content\themes\base\accordion.css" />
+    <Content Include="packages\jQuery.UI.Combined.1.12.1\Content\Content\themes\base\all.css" />
+    <Content Include="packages\jQuery.UI.Combined.1.12.1\Content\Content\themes\base\autocomplete.css" />
+    <Content Include="packages\jQuery.UI.Combined.1.12.1\Content\Content\themes\base\base.css" />
+    <Content Include="packages\jQuery.UI.Combined.1.12.1\Content\Content\themes\base\button.css" />
+    <Content Include="packages\jQuery.UI.Combined.1.12.1\Content\Content\themes\base\core.css" />
+    <Content Include="packages\jQuery.UI.Combined.1.12.1\Content\Content\themes\base\datepicker.css" />
+    <Content Include="packages\jQuery.UI.Combined.1.12.1\Content\Content\themes\base\dialog.css" />
+    <Content Include="packages\jQuery.UI.Combined.1.12.1\Content\Content\themes\base\draggable.css" />
+    <Content Include="packages\jQuery.UI.Combined.1.12.1\Content\Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="packages\jQuery.UI.Combined.1.12.1\Content\Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="packages\jQuery.UI.Combined.1.12.1\Content\Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="packages\jQuery.UI.Combined.1.12.1\Content\Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="packages\jQuery.UI.Combined.1.12.1\Content\Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="packages\jQuery.UI.Combined.1.12.1\Content\Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="packages\jQuery.UI.Combined.1.12.1\Content\Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="packages\jQuery.UI.Combined.1.12.1\Content\Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="packages\jQuery.UI.Combined.1.12.1\Content\Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="packages\jQuery.UI.Combined.1.12.1\Content\Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="packages\jQuery.UI.Combined.1.12.1\Content\Content\themes\base\images\ui-icons_444444_256x240.png" />
+    <Content Include="packages\jQuery.UI.Combined.1.12.1\Content\Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="packages\jQuery.UI.Combined.1.12.1\Content\Content\themes\base\images\ui-icons_555555_256x240.png" />
+    <Content Include="packages\jQuery.UI.Combined.1.12.1\Content\Content\themes\base\images\ui-icons_777620_256x240.png" />
+    <Content Include="packages\jQuery.UI.Combined.1.12.1\Content\Content\themes\base\images\ui-icons_777777_256x240.png" />
+    <Content Include="packages\jQuery.UI.Combined.1.12.1\Content\Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="packages\jQuery.UI.Combined.1.12.1\Content\Content\themes\base\images\ui-icons_cc0000_256x240.png" />
+    <Content Include="packages\jQuery.UI.Combined.1.12.1\Content\Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="packages\jQuery.UI.Combined.1.12.1\Content\Content\themes\base\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="packages\jQuery.UI.Combined.1.12.1\Content\Content\themes\base\jquery-ui.css" />
+    <Content Include="packages\jQuery.UI.Combined.1.12.1\Content\Content\themes\base\jquery-ui.min.css" />
+    <Content Include="packages\jQuery.UI.Combined.1.12.1\Content\Content\themes\base\menu.css" />
+    <Content Include="packages\jQuery.UI.Combined.1.12.1\Content\Content\themes\base\progressbar.css" />
+    <Content Include="packages\jQuery.UI.Combined.1.12.1\Content\Content\themes\base\resizable.css" />
+    <Content Include="packages\jQuery.UI.Combined.1.12.1\Content\Content\themes\base\selectable.css" />
+    <Content Include="packages\jQuery.UI.Combined.1.12.1\Content\Content\themes\base\selectmenu.css" />
+    <Content Include="packages\jQuery.UI.Combined.1.12.1\Content\Content\themes\base\slider.css" />
+    <Content Include="packages\jQuery.UI.Combined.1.12.1\Content\Content\themes\base\sortable.css" />
+    <Content Include="packages\jQuery.UI.Combined.1.12.1\Content\Content\themes\base\spinner.css" />
+    <Content Include="packages\jQuery.UI.Combined.1.12.1\Content\Content\themes\base\tabs.css" />
+    <Content Include="packages\jQuery.UI.Combined.1.12.1\Content\Content\themes\base\theme.css" />
+    <Content Include="packages\jQuery.UI.Combined.1.12.1\Content\Content\themes\base\tooltip.css" />
+    <Content Include="packages\jQuery.UI.Combined.1.12.1\Content\Scripts\jquery-ui-1.12.1.js" />
+    <Content Include="packages\jQuery.UI.Combined.1.12.1\Content\Scripts\jquery-ui-1.12.1.min.js" />
+    <Content Include="packages\Microsoft.AspNet.Providers.Core.2.0.0\lib\net40\System.Web.Providers.dll" />
+    <Content Include="packages\Microsoft.AspNet.Providers.Core.2.0.0\lib\net40\System.Web.Providers.xml" />
+    <Content Include="packages\Microsoft.AspNet.Providers.Core.2.0.0\ReadMe.txt" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\Roslyn45\csc.exe" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\Roslyn45\csi.exe" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\Roslyn45\Microsoft.Build.Tasks.CodeAnalysis.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\Roslyn45\Microsoft.CodeAnalysis.CSharp.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\Roslyn45\Microsoft.CodeAnalysis.CSharp.Scripting.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\Roslyn45\Microsoft.CodeAnalysis.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\Roslyn45\Microsoft.CodeAnalysis.Scripting.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\Roslyn45\Microsoft.CodeAnalysis.VisualBasic.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\Roslyn45\Microsoft.DiaSymReader.Native.amd64.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\Roslyn45\Microsoft.DiaSymReader.Native.x86.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\Roslyn45\System.AppContext.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\Roslyn45\System.Collections.Immutable.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\Roslyn45\System.Diagnostics.StackTrace.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\Roslyn45\System.IO.FileSystem.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\Roslyn45\System.IO.FileSystem.Primitives.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\Roslyn45\System.Reflection.Metadata.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\Roslyn45\vbc.exe" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\Roslyn45\VBCSCompiler.exe" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\csc.exe" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\csi.exe" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\Microsoft.Build.Tasks.CodeAnalysis.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\Microsoft.CodeAnalysis.CSharp.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\Microsoft.CodeAnalysis.CSharp.Scripting.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\Microsoft.CodeAnalysis.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\Microsoft.CodeAnalysis.Scripting.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\Microsoft.CodeAnalysis.VisualBasic.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\Microsoft.DiaSymReader.Native.amd64.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\Microsoft.DiaSymReader.Native.x86.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\System.AppContext.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\System.Collections.Immutable.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\System.Console.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\System.Diagnostics.FileVersionInfo.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\System.Diagnostics.StackTrace.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\System.IO.Compression.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\System.IO.FileSystem.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\System.IO.FileSystem.Primitives.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\System.IO.Pipes.AccessControl.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\System.IO.Pipes.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\System.Reflection.Metadata.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\System.Security.AccessControl.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\System.Security.Claims.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\System.Security.Cryptography.Algorithms.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\System.Security.Cryptography.Encoding.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\System.Security.Cryptography.Primitives.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\System.Security.Cryptography.X509Certificates.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\System.Security.Principal.Windows.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\System.Text.Encoding.CodePages.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\System.ValueTuple.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\System.Xml.ReaderWriter.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\System.Xml.XmlDocument.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\System.Xml.XPath.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\System.Xml.XPath.XDocument.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\vbc.exe" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\VBCSCompiler.exe" />
+    <Content Include="packages\popper.js.1.14.3\content\Scripts\esm\popper-utils.js" />
+    <Content Include="packages\popper.js.1.14.3\content\Scripts\esm\popper-utils.min.js" />
+    <Content Include="packages\popper.js.1.14.3\content\Scripts\esm\popper.js" />
+    <Content Include="packages\popper.js.1.14.3\content\Scripts\esm\popper.min.js" />
+    <Content Include="packages\popper.js.1.14.3\content\Scripts\popper-utils.js" />
+    <Content Include="packages\popper.js.1.14.3\content\Scripts\popper-utils.min.js" />
+    <Content Include="packages\popper.js.1.14.3\content\Scripts\popper.js" />
+    <Content Include="packages\popper.js.1.14.3\content\Scripts\popper.min.js" />
+    <Content Include="packages\popper.js.1.14.3\content\Scripts\umd\popper-utils.js" />
+    <Content Include="packages\popper.js.1.14.3\content\Scripts\umd\popper-utils.min.js" />
+    <Content Include="packages\popper.js.1.14.3\content\Scripts\umd\popper.js" />
+    <Content Include="packages\popper.js.1.14.3\content\Scripts\umd\popper.min.js" />
+    <Content Include="pictures\07e1ef44-a092-46a3-8b4e-d71fe2753a4b.jpg" />
+    <Content Include="pictures\527ed51e-97e1-45c6-af19-26bc691b846f.jpg" />
+    <Content Include="pictures\Amicalola.jpg" />
+    <Content Include="pictures\Arches.jpg" />
+    <Content Include="pictures\Bells.jpg" />
+    <Content Include="pictures\Childmind.JPG" />
+    <Content Include="pictures\Dunes.jpg" />
+    <Content Include="pictures\familyIcon.png" />
+    <Content Include="pictures\healthyChildren.jpg" />
+    <Content Include="pictures\hiker.jpg" />
+    <Content Include="pictures\Hiking.jpg" />
+    <Content Include="pictures\nationalParks.jpg" />
+    <Content Include="pictures\NP.JPG" />
+    <Content Include="pictures\ProfileDefault.jpg" />
+    <Content Include="pictures\rei.jpg" />
+    <Content Include="pictures\saveChildren.jpg" />
+    <Content Include="pictures\SleepingBear.jpg" />
+    <Content Include="Register.aspx" />
+    <Content Include="Scripts\bootstrap.bundle.js" />
+    <Content Include="Scripts\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\bootstrap.min.js.map" />
+    <Content Include="Scripts\bootstrap.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.min.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.js.map" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-reboot.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.css.map" />
+    <Content Include="Content\bootstrap-grid.min.css.map" />
+    <Content Include="Content\bootstrap-grid.css.map" />
+    <Content Include="Scripts\esm\popper-utils.js" />
+    <Content Include="Scripts\esm\popper-utils.min.js" />
+    <Content Include="Scripts\esm\popper.js" />
+    <Content Include="Scripts\esm\popper.min.js" />
+    <Content Include="Scripts\esm\popper.min.js.map" />
+    <Content Include="Scripts\esm\popper.js.map" />
+    <Content Include="Scripts\esm\popper-utils.min.js.map" />
+    <Content Include="Scripts\esm\popper-utils.js.map" />
+    <Content Include="packages\bootstrap.4.3.1\.signature.p7s" />
+    <Content Include="packages\bootstrap.4.3.1\bootstrap.4.3.1.nupkg" />
+    <Content Include="packages\bootstrap.4.3.1\contentFiles\Content\bootstrap-grid.css.map" />
+    <Content Include="packages\bootstrap.4.3.1\contentFiles\Content\bootstrap-grid.min.css.map" />
+    <Content Include="packages\bootstrap.4.3.1\contentFiles\Content\bootstrap-reboot.css.map" />
+    <Content Include="packages\bootstrap.4.3.1\contentFiles\Content\bootstrap-reboot.min.css.map" />
+    <Content Include="packages\bootstrap.4.3.1\contentFiles\Content\bootstrap.css.map" />
+    <Content Include="packages\bootstrap.4.3.1\contentFiles\Content\bootstrap.min.css.map" />
+    <Content Include="packages\bootstrap.4.3.1\contentFiles\Scripts\bootstrap.bundle.js.map" />
+    <Content Include="packages\bootstrap.4.3.1\contentFiles\Scripts\bootstrap.bundle.min.js.map" />
+    <Content Include="packages\bootstrap.4.3.1\contentFiles\Scripts\bootstrap.js.map" />
+    <Content Include="packages\bootstrap.4.3.1\contentFiles\Scripts\bootstrap.min.js.map" />
+    <Content Include="packages\bootstrap.4.3.1\content\Content\bootstrap-grid.css.map" />
+    <Content Include="packages\bootstrap.4.3.1\content\Content\bootstrap-grid.min.css.map" />
+    <Content Include="packages\bootstrap.4.3.1\content\Content\bootstrap-reboot.css.map" />
+    <Content Include="packages\bootstrap.4.3.1\content\Content\bootstrap-reboot.min.css.map" />
+    <Content Include="packages\bootstrap.4.3.1\content\Content\bootstrap.css.map" />
+    <Content Include="packages\bootstrap.4.3.1\content\Content\bootstrap.min.css.map" />
+    <Content Include="packages\bootstrap.4.3.1\content\Scripts\bootstrap.bundle.js.map" />
+    <Content Include="packages\bootstrap.4.3.1\content\Scripts\bootstrap.bundle.min.js.map" />
+    <Content Include="packages\bootstrap.4.3.1\content\Scripts\bootstrap.js.map" />
+    <Content Include="packages\bootstrap.4.3.1\content\Scripts\bootstrap.min.js.map" />
+    <Content Include="packages\jQuery.3.4.1\.signature.p7s" />
+    <Content Include="packages\jQuery.3.4.1\Content\Scripts\jquery-3.4.1.min.map" />
+    <Content Include="packages\jQuery.3.4.1\Content\Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="packages\jQuery.3.4.1\jQuery.3.4.1.nupkg" />
+    <Content Include="packages\jQuery.3.4.1\Tools\common.ps1" />
+    <Content Include="packages\jQuery.3.4.1\Tools\install.ps1" />
+    <Content Include="packages\jQuery.3.4.1\Tools\uninstall.ps1" />
+    <Content Include="packages\popper.js.1.14.3\.signature.p7s" />
+    <Content Include="packages\popper.js.1.14.3\content\Scripts\esm\popper-utils.js.map" />
+    <Content Include="packages\popper.js.1.14.3\content\Scripts\esm\popper-utils.min.js.map" />
+    <Content Include="packages\popper.js.1.14.3\content\Scripts\esm\popper.js.map" />
+    <Content Include="packages\popper.js.1.14.3\content\Scripts\esm\popper.min.js.map" />
+    <Content Include="packages\popper.js.1.14.3\content\Scripts\popper-utils.js.map" />
+    <Content Include="packages\popper.js.1.14.3\content\Scripts\popper-utils.min.js.map" />
+    <Content Include="packages\popper.js.1.14.3\content\Scripts\popper.js.map" />
+    <Content Include="packages\popper.js.1.14.3\content\Scripts\popper.min.js.map" />
+    <Content Include="packages\popper.js.1.14.3\content\Scripts\README.md" />
+    <Content Include="packages\popper.js.1.14.3\content\Scripts\umd\popper-utils.js.map" />
+    <Content Include="packages\popper.js.1.14.3\content\Scripts\umd\popper-utils.min.js.map" />
+    <Content Include="packages\popper.js.1.14.3\content\Scripts\umd\popper.js.map" />
+    <Content Include="packages\popper.js.1.14.3\content\Scripts\umd\popper.min.js.map" />
+    <Content Include="packages\popper.js.1.14.3\popper.js.1.14.3.nupkg" />
+    <Content Include="packages\Microsoft.AspNet.Providers.2.0.0\.signature.p7s" />
+    <Content Include="packages\Microsoft.AspNet.Providers.2.0.0\content\web.config.transform" />
+    <Content Include="packages\Microsoft.AspNet.Providers.2.0.0\Microsoft.AspNet.Providers.2.0.0.nupkg" />
+    <Content Include="packages\Microsoft.AspNet.Providers.2.0.0\tools\Install.ps1" />
+    <Content Include="packages\Microsoft.AspNet.Providers.Core.2.0.0\.signature.p7s" />
+    <Content Include="packages\Microsoft.AspNet.Providers.Core.2.0.0\Microsoft.AspNet.Providers.Core.2.0.0.nupkg" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\.signature.p7s" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.Extensions.props" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.Extensions.props" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\content\net45\app.config.install.xdt" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\content\net45\app.config.uninstall.xdt" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\content\net45\web.config.install.xdt" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\content\net45\web.config.uninstall.xdt" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\content\net46\app.config.install.xdt" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\content\net46\app.config.uninstall.xdt" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\content\net46\web.config.install.xdt" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\content\net46\web.config.uninstall.xdt" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0.nupkg" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\net45\install.ps1" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\net45\uninstall.ps1" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\Roslyn45\csc.exe.config" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\Roslyn45\csc.rsp" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\Roslyn45\csi.rsp" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\Roslyn45\Microsoft.CSharp.Core.targets" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\Roslyn45\Microsoft.VisualBasic.Core.targets" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\Roslyn45\vbc.exe.config" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\Roslyn45\vbc.rsp" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\Roslyn45\VBCSCompiler.exe.config" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\csc.exe.config" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\csc.rsp" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\csi.exe.config" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\csi.rsp" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\Microsoft.CSharp.Core.targets" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\Microsoft.Managed.Core.targets" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\Microsoft.VisualBasic.Core.targets" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\vbc.exe.config" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\vbc.rsp" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\VBCSCompiler.exe.config" />
+    <Content Include="packages\jQuery.UI.Combined.1.12.1\.signature.p7s" />
+    <Content Include="packages\jQuery.UI.Combined.1.12.1\jQuery.UI.Combined.1.12.1.nupkg" />
+    <Content Include="packages\jQuery.UI.Combined.1.12.1\Tools\common.ps1" />
+    <Content Include="packages\jQuery.UI.Combined.1.12.1\Tools\install.ps1" />
+    <Content Include="packages\jQuery.UI.Combined.1.12.1\Tools\uninstall.ps1" />
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <Content Include="Scripts\jquery-ui-1.12.1.js" />
+    <Content Include="Scripts\jquery-ui-1.12.1.min.js" />
+    <Content Include="Scripts\popper-utils.js" />
+    <Content Include="Scripts\popper-utils.min.js" />
+    <Content Include="Scripts\popper.js" />
+    <Content Include="Scripts\popper.min.js" />
+    <Content Include="Scripts\umd\popper-utils.js" />
+    <Content Include="Scripts\umd\popper-utils.min.js" />
+    <Content Include="Scripts\umd\popper.js" />
+    <Content Include="Scripts\umd\popper.min.js" />
+    <Content Include="Style\styleHikes.css" />
+    <Content Include="TrailByTag.aspx" />
+    <Content Include="TrailDetail.aspx" />
+    <Content Include="Videos.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddHike.aspx.cs">
+      <DependentUpon>AddHike.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddHike.aspx.designer.cs">
+      <DependentUpon>AddHike.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddHikeConfirmation.aspx.cs">
+      <DependentUpon>AddHikeConfirmation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddHikeConfirmation.aspx.designer.cs">
+      <DependentUpon>AddHikeConfirmation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AllTrails.aspx.cs">
+      <DependentUpon>AllTrails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AllTrails.aspx.designer.cs">
+      <DependentUpon>AllTrails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\AddhikeBanner.ascx.cs">
+      <DependentUpon>AddhikeBanner.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\AddhikeBanner.ascx.designer.cs">
+      <DependentUpon>AddhikeBanner.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Banner.ascx.cs">
+      <DependentUpon>Banner.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Banner.ascx.designer.cs">
+      <DependentUpon>Banner.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditProfile.aspx.cs">
+      <DependentUpon>EditProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditProfile.aspx.designer.cs">
+      <DependentUpon>EditProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Hikes.Master.cs">
+      <DependentUpon>Hikes.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\Hikes.Master.designer.cs">
+      <DependentUpon>Hikes.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TrailByTag.aspx.cs">
+      <DependentUpon>TrailByTag.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TrailByTag.aspx.designer.cs">
+      <DependentUpon>TrailByTag.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TrailDetail.aspx.cs">
+      <DependentUpon>TrailDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TrailDetail.aspx.designer.cs">
+      <DependentUpon>TrailDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Videos.aspx.cs">
+      <DependentUpon>Videos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Videos.aspx.designer.cs">
+      <DependentUpon>Videos.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Master\Hikes.Master" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+    <Content Include="Scripts\umd\popper.min.js.map" />
+    <Content Include="Scripts\umd\popper.js.map" />
+    <Content Include="Scripts\umd\popper-utils.min.js.map" />
+    <Content Include="Scripts\umd\popper-utils.js.map" />
+    <Content Include="Scripts\README.md" />
+    <Content Include="Scripts\popper.min.js.map" />
+    <Content Include="Scripts\popper.js.map" />
+    <Content Include="Scripts\popper-utils.min.js.map" />
+    <Content Include="Scripts\popper-utils.js.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="packages\popper.js.1.14.3\content\Scripts\index.d.ts" />
+    <TypeScriptCompile Include="Scripts\index.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>51981</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44301/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

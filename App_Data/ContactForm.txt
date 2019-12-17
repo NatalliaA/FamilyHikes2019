@@ -1,0 +1,8 @@
+﻿Hi FamilyHikes team,
+
+A user has left the following feedback at the site:
+
+User name:		<% UserName %>
+E-Mail:			<% E-Mail %>
+Message:		<% Comment %>
+
