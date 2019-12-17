@@ -1,5 +1,5 @@
 # FamilyHikes2019
-# Author: Natallia Akulenka
+# @author: Natallia Akulenka
 # ASP.NET, C# for the server-side code, Bootstrap for styling, ACCESS for data storing, SQL for accessing the data
 
 My website FamilyHikes is a social networking website for families who like hiking. It allows users to share information and experiences about trails to hike with children in the U.S. The target user group are families with children who enjoy the outdoors. The website purposes are to bring new ideas for family-oriented hiking, enable users to meet people with similar interests, and to save some time spent searching information.
