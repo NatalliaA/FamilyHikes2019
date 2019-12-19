@@ -368,6 +368,18 @@
     <Content Include="pictures\saveChildren.jpg" />
     <Content Include="pictures\SleepingBear.jpg" />
     <Content Include="Register.aspx" />
+    <Content Include="Screenshots\lgAbout.png" />
+    <Content Include="Screenshots\lgAllTrails.png" />
+    <Content Include="Screenshots\lgAllTrailsAddHike.png" />
+    <Content Include="Screenshots\lgComments.png" />
+    <Content Include="Screenshots\lgSearch.png" />
+    <Content Include="Screenshots\lgShareHike.png" />
+    <Content Include="Screenshots\lgTag.png" />
+    <Content Include="Screenshots\lgTrailDetail.png" />
+    <Content Include="Screenshots\lgTraildetail2.png" />
+    <Content Include="Screenshots\lgVideo.png" />
+    <Content Include="Screenshots\sm1.png" />
+    <Content Include="Screenshots\smMenuOpen.png" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -495,6 +507,7 @@
     <Content Include="Scripts\umd\popper.js" />
     <Content Include="Scripts\umd\popper.min.js" />
     <Content Include="Style\styleHikes.css" />
+    <Content Include="ReadMe.txt" />
     <Content Include="TrailByTag.aspx" />
     <Content Include="TrailDetail.aspx" />
     <Content Include="Videos.aspx" />
