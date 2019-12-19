@@ -15,7 +15,7 @@ Any user can search content using the search text field option or go through the
 <img src="Screenshots/lgSearch.png">
 <img src="Screenshots/lgTag.png">
 <img src="Screenshots/lgTrailDetail.png">
-<img src="Screenshots/lgTrailDetail2.png">
+<img src="Screenshots/lgTraildetail2.png">
 <img src="Screenshots/lgComments.png">
 <img src="Screenshots/lgShareHike.png">
 <img src="Screenshots/lgVideo.png">
