@@ -9,11 +9,11 @@ Any user can search content using the search text field option or go through the
 
 <img src="Screenshots/lgAbout.png">
 <img src="Screenshots/lgAllTrails.png">
+<img src="Screenshots/lgAllTrailsAddHike.png">
 <img src="Screenshots/sm1.png">
 <img src="Screenshots/smMenuOpen.png">
 <img src="Screenshots/lgSearch.png">
 <img src="Screenshots/lgTag.png">
-<img src="Screenshots/lgAllTrailsAddHike.png">
 <img src="Screenshots/lgTrailDetail.png">
 <img src="Screenshots/lgTrailDetail2.png">
 <img src="Screenshots/lgComments.png">
