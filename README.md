@@ -7,7 +7,7 @@ My website FamilyHikes is a social networking website for families who like hiki
 In this website, any user could read information posted on the website but, in order to share information or comment somebody’s posting, the user would need to register on the website. Registered users can post information about trails and comment other postings. 
 Any user can search content using the search text field option or go through the information on the All Trails page, which displays a list of hiking trails including main trail features, e.g., trail name, the state where the trail is located, top features, length, hiking duration, difficulty and picture. The user can sort listed hikes by a selected column (e.g. sort all trails by the state). From this main page, the user can navigate to a page showing detailed information about a particular trail including description in details and additional pictures, hiking tips, author name and date of publishing. In order to make it easier for the users to find the content they are particularly interested in, the information on the website is tagged with topic areas (e.g.short, waterfall, camping, etc.).
 
-<img src="Screenshots/lgAbout.png" width="100">
+<img src="Screenshots/lgAbout.png">
 
 
 
