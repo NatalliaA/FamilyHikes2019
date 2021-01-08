@@ -1,4 +1,4 @@
-# FamilyHikes2019
+# family-hikes-asp
 # @author: Natallia Akulenka
 # ASP.NET, C# for the server-side code, Bootstrap for styling, ACCESS for data storing, SQL for accessing the data
 
